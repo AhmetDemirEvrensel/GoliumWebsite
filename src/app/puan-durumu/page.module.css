@@ -83,7 +83,7 @@
 }
 
 .groupButton:hover:not(.activeGroup) {
-  border-color: #1e3c72;
+  border-color: #003D20;
   transform: translateY(-2px);
 }
 
@@ -97,7 +97,7 @@
 .groupTitle {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003D20;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -112,7 +112,7 @@
 .tableHeader {
   display: grid;
   grid-template-columns: 50px 1fr repeat(8, 60px);
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #003D20 0%, #005533 100%);
   color: white;
   font-weight: 700;
 }
@@ -135,8 +135,8 @@
 }
 
 .qualifiedRow {
-  background: rgba(40, 167, 69, 0.1);
-  border-left: 4px solid #28a745;
+  background: rgba(0, 119, 68, 0.1);
+  border-left: 4px solid #007744;
 }
 
 .cell {
@@ -148,7 +148,7 @@
 .teamCell {
   padding: 1rem 1rem;
   font-weight: 700;
-  color: #1e3c72;
+  color: #003D20;
   text-align: left;
 }
 
@@ -156,7 +156,7 @@
   padding: 1rem 0.5rem;
   text-align: center;
   font-weight: 900;
-  color: #1e3c72;
+  color: #003D20;
   background: #f8f9fa;
 }
 
@@ -176,8 +176,8 @@
 .qualifiedIndicator {
   width: 20px;
   height: 15px;
-  background: rgba(40, 167, 69, 0.3);
-  border-left: 4px solid #28a745;
+  background: rgba(0, 119, 68, 0.3);
+  border-left: 4px solid #007744;
 }
 
 .matchesList {
@@ -195,7 +195,7 @@
 }
 
 .matchCard:hover {
-  border-color: #1e3c72;
+  border-color: #003D20;
   transform: translateY(-2px);
 }
 
@@ -208,7 +208,7 @@
 
 .homeTeam, .awayTeam {
   font-weight: 700;
-  color: #1e3c72;
+  color: #003D20;
   flex: 1;
   text-align: center;
 }
@@ -229,7 +229,7 @@
 
 .vs {
   background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
-  color: #1e3c72;
+  color: #003D20;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 900;
@@ -243,7 +243,7 @@
 
 .matchDate {
   font-weight: 600;
-  color: #1e3c72;
+  color: #003D20;
 }
 
 .matchTime {

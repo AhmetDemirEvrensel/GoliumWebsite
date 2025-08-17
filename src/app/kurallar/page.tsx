@@ -39,7 +39,7 @@ export default function Rules() {
               <h2>Ödüller</h2>
               <ul>
                 <li>🏆 1. Takım: 150.000 TL + Bir sonraki turnuvaya ücretsiz katılım</li>
-                <li>🥈 2. Takım: Giriş ücretinin iadesi + Ücretsiz katılım hakkı</li>
+                <li>🥈 2. Takım: Bir sonraki turnuvaya ücretsiz katılım</li>
                 <li>🥉 3. Takım: Bir sonraki turnuvaya ücretsiz katılım</li>
               </ul>
             </section>
@@ -50,7 +50,7 @@ export default function Rules() {
                 <li>Takım başı en az 20 oyuncu</li>
                 <li>Kişi başı katılım ücreti: 1000 TL</li>
                 <li>Takım başı minimum ödeme: 20.000 TL</li>
-                <li>Aktif lisaneli oyuncular turnuvaya katılamaz. (Son 1 yıl içinde TFF lisanslı maçta oynamış kişiler elendir)</li>
+                <li>Aktif lisanslı oyuncular turnuvaya katılamaz. (Son 1 yıl içinde TFF lisanslı maçta oynamış kişiler elenir)</li>
               </ul>
             </section>
 
