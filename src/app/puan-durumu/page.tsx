@@ -28,6 +28,15 @@ interface Match {
   played: boolean;
 }
 
+interface Player {
+  id: number;
+  name: string;
+  team: string;
+  goals: number;
+  assists: number;
+  matches: number;
+}
+
 // Mock data for 8 groups
 const mockGroups: { [key: string]: Team[] } = {
   'A': [
@@ -95,8 +104,32 @@ const mockFixtures: { [key: string]: Match[] } = {
   ],
 };
 
+// Mock data for top scorers
+const mockTopScorers: Player[] = [
+  { id: 1, name: "Cristiano Ronaldo", team: "Real Madrid", goals: 8, assists: 2, matches: 3 },
+  { id: 2, name: "Lionel Messi", team: "Barcelona", goals: 7, assists: 4, matches: 3 },
+  { id: 3, name: "Erling Haaland", team: "Manchester City", goals: 6, assists: 1, matches: 3 },
+  { id: 4, name: "Kylian Mbappé", team: "PSG", goals: 5, assists: 3, matches: 3 },
+  { id: 5, name: "Harry Kane", team: "Bayern München", goals: 5, assists: 2, matches: 3 },
+  { id: 6, name: "Mauro Icardi", team: "Galatasaray", goals: 4, assists: 1, matches: 3 },
+  { id: 7, name: "Dusan Vlahovic", team: "Juventus", goals: 4, assists: 0, matches: 3 },
+  { id: 8, name: "Mohamed Salah", team: "Liverpool", goals: 3, assists: 2, matches: 3 },
+];
+
+// Mock data for top assists
+const mockTopAssists: Player[] = [
+  { id: 1, name: "Kevin De Bruyne", team: "Manchester City", goals: 2, assists: 6, matches: 3 },
+  { id: 2, name: "Lionel Messi", team: "Barcelona", goals: 7, assists: 4, matches: 3 },
+  { id: 3, name: "Luka Modric", team: "Real Madrid", goals: 1, assists: 4, matches: 3 },
+  { id: 4, name: "Kylian Mbappé", team: "PSG", goals: 5, assists: 3, matches: 3 },
+  { id: 5, name: "Bruno Fernandes", team: "Manchester City", goals: 2, assists: 3, matches: 3 },
+  { id: 6, name: "Dries Mertens", team: "Galatasaray", goals: 2, assists: 3, matches: 3 },
+  { id: 7, name: "Federico Chiesa", team: "Juventus", goals: 1, assists: 2, matches: 3 },
+  { id: 8, name: "Harry Kane", team: "Bayern München", goals: 5, assists: 2, matches: 3 },
+];
+
 export default function Standings() {
-  const [activeTab, setActiveTab] = useState<'standings' | 'fixtures'>('standings');
+  const [activeTab, setActiveTab] = useState<'standings' | 'fixtures' | 'statistics'>('standings');
   const [selectedGroup, setSelectedGroup] = useState('A');
 
   const groups = Object.keys(mockGroups);
@@ -120,6 +153,12 @@ export default function Standings() {
               onClick={() => setActiveTab('fixtures')}
             >
               Fikstür
+            </button>
+            <button 
+              className={`${styles.tab} ${activeTab === 'statistics' ? styles.activeTab : ''}`}
+              onClick={() => setActiveTab('statistics')}
+            >
+              Gol & Asist Krallığı
             </button>
           </div>
 
@@ -207,6 +246,60 @@ export default function Standings() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'statistics' && (
+            <div className={styles.statisticsContainer}>
+              <div className={styles.statisticsGrid}>
+                <div className={styles.statisticsSection}>
+                  <h2 className={styles.sectionTitle}>🥅 Gol Krallığı</h2>
+                  <div className={styles.playersTable}>
+                    <div className={styles.playersHeader}>
+                      <div className={styles.playerHeaderCell}>Sıra</div>
+                      <div className={styles.playerHeaderCell}>Oyuncu</div>
+                      <div className={styles.playerHeaderCell}>Takım</div>
+                      <div className={styles.playerHeaderCell}>Gol</div>
+                      <div className={styles.playerHeaderCell}>Maç</div>
+                    </div>
+                    {mockTopScorers
+                      .sort((a, b) => b.goals - a.goals)
+                      .map((player, index) => (
+                        <div key={player.id} className={`${styles.playerRow} ${index < 3 ? styles.topPlayerRow : ''}`}>
+                          <div className={styles.playerCell}>{index + 1}</div>
+                          <div className={styles.playerNameCell}>{player.name}</div>
+                          <div className={styles.playerTeamCell}>{player.team}</div>
+                          <div className={styles.playerStatCell}>{player.goals}</div>
+                          <div className={styles.playerCell}>{player.matches}</div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+
+                <div className={styles.statisticsSection}>
+                  <h2 className={styles.sectionTitle}>🎯 Asist Krallığı</h2>
+                  <div className={styles.playersTable}>
+                    <div className={styles.playersHeader}>
+                      <div className={styles.playerHeaderCell}>Sıra</div>
+                      <div className={styles.playerHeaderCell}>Oyuncu</div>
+                      <div className={styles.playerHeaderCell}>Takım</div>
+                      <div className={styles.playerHeaderCell}>Asist</div>
+                      <div className={styles.playerHeaderCell}>Maç</div>
+                    </div>
+                    {mockTopAssists
+                      .sort((a, b) => b.assists - a.assists)
+                      .map((player, index) => (
+                        <div key={player.id} className={`${styles.playerRow} ${index < 3 ? styles.topPlayerRow : ''}`}>
+                          <div className={styles.playerCell}>{index + 1}</div>
+                          <div className={styles.playerNameCell}>{player.name}</div>
+                          <div className={styles.playerTeamCell}>{player.team}</div>
+                          <div className={styles.playerStatCell}>{player.assists}</div>
+                          <div className={styles.playerCell}>{player.matches}</div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
               </div>
             </div>
           )}
