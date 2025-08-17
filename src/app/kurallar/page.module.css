@@ -1,0 +1,143 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #003D20 0%, #005533 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rulesContainer {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.ruleSection {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.ruleSection:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.ruleSection h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003D20;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.ruleSection h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+  border-radius: 2px;
+}
+
+.ruleSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ruleSection li {
+  background: #f8f9fa;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #003D20;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.ruleSection li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.ruleSection li::before {
+  content: '⚽';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.contactInfo {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contactInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.contactInfo p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .rulesContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ruleSection h2 {
+    font-size: 1.5rem;
+  }
+  
+  .ruleSection li {
+    padding: 0.8rem 1rem;
+    margin-left: 1rem;
+  }
+}

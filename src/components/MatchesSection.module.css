@@ -1,0 +1,286 @@
+.matchesSection {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.weekSection {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 0 2rem;
+}
+
+.weekHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.weekHeader h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003D20;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navButton {
+  background: linear-gradient(135deg, #003D20 0%);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.matchesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.matchCard {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.matchCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.homeTeam, .awayTeam {
+  font-weight: 700;
+  color: #003D20;
+  font-size: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.vs {
+  background: linear-gradient(135deg, #003D20 1%, #005533 1%);
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+}
+
+.matchInfo {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
+}
+
+.datetime {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-weight: 600;
+  color: #003D20;
+}
+
+.time {
+  font-weight: 600;
+  color: #ffffff;
+  background: #003D20;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.stadium {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.additionalSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.statsSection h2, .newsSection h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003D20;
+  margin-bottom: 1.5rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #003D20;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.newsList {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.newsItem {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.newsItem:last-child {
+  border-bottom: none;
+}
+
+.newsItem:hover {
+  background: #f8f9fa;
+  padding-left: 2rem;
+}
+
+.newsDate {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.3rem;
+}
+
+.newsTitle {
+  display: block;
+  font-weight: 600;
+  color: #003D20;
+}
+
+.newsButtonContainer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.allNewsButton {
+  display: inline-block;
+  background: linear-gradient(135deg, #003D20 0%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.allNewsButton:hover {
+  background: linear-gradient(135deg, #2a5298 0%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .weekSection {
+    padding: 0 1rem;
+  }
+  
+  .weekHeader {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .weekHeader h2 {
+    font-size: 1.5rem;
+  }
+  
+  .matchesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .additionalSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .teams {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .homeTeam, .awayTeam {
+    font-size: 0.9rem;
+  }
+  
+  .vs {
+    margin: 0;
+  }
+}
