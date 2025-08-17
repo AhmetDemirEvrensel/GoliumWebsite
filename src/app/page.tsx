@@ -22,8 +22,8 @@ export default function Home() {
               <Image
                 src="/tanitim.jpg"
                 alt="150.000 TL Ödüllü Futbol Turnuvası"
-                width={400}
-                height={300}
+                width={600}
+                height={450}
                 priority
                 className={styles.sliderImage}
               />
