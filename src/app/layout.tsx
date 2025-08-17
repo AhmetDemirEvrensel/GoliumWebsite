@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Royal Cup - 150.000 TL Ödüllü Futbol Turnuvası",
-  description: "Royal Cup futbol turnuvası - 8 grup, 32 takım ile düzenlenen prestijli turnuva. Şimdi kayıt olun!",
+  title: "Golium - 150.000 TL Ödüllü Futbol Turnuvası",
+  description: "Golium futbol turnuvası - 8 grup, 32 takım ile düzenlenen prestijli turnuva. Şimdi kayıt olun!",
 };
 
 export default function RootLayout({

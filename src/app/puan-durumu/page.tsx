@@ -139,7 +139,7 @@ export default function Standings() {
       <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Royal Cup Puan Durumu & Fikstür</h1>
+          <h1 className={styles.title}>Golium Puan Durumu & Fikstür</h1>
           
           <div className={styles.tabContainer}>
             <button 
@@ -163,7 +163,7 @@ export default function Standings() {
           </div>
 
           <div className={styles.groupSelector}>
-            {groups.map(group => (
+            {(activeTab === 'standings' || activeTab === 'fixtures') && groups.map(group => (
               <button
                 key={group}
                 className={`${styles.groupButton} ${selectedGroup === group ? styles.activeGroup : ''}`}
@@ -266,8 +266,8 @@ export default function Standings() {
                     {mockTopScorers
                       .sort((a, b) => b.goals - a.goals)
                       .map((player, index) => (
-                        <div key={player.id} className={`${styles.playerRow} ${index < 3 ? styles.topPlayerRow : ''}`}>
-                          <div className={styles.playerCell}>{index + 1}</div>
+                        <div key={player.id} className={`${styles.playerRow} ${index === 0 ? styles.topPlayerRow : ''}`}>
+                          <div className={styles.playerCell}>{index === 0 ? '👑' : index + 1}</div>
                           <div className={styles.playerNameCell}>{player.name}</div>
                           <div className={styles.playerTeamCell}>{player.team}</div>
                           <div className={styles.playerStatCell}>{player.goals}</div>
@@ -290,8 +290,8 @@ export default function Standings() {
                     {mockTopAssists
                       .sort((a, b) => b.assists - a.assists)
                       .map((player, index) => (
-                        <div key={player.id} className={`${styles.playerRow} ${index < 3 ? styles.topPlayerRow : ''}`}>
-                          <div className={styles.playerCell}>{index + 1}</div>
+                        <div key={player.id} className={`${styles.playerRow} ${index === 0 ? styles.topPlayerRow : ''}`}>
+                          <div className={styles.playerCell}>{index === 0 ? '👑' : index + 1}</div>
                           <div className={styles.playerNameCell}>{player.name}</div>
                           <div className={styles.playerTeamCell}>{player.team}</div>
                           <div className={styles.playerStatCell}>{player.assists}</div>

@@ -42,6 +42,7 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  align-items: start;
 }
 
 .newsCard {
@@ -53,6 +54,10 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  align-self: start;
 }
 
 .newsCard:hover {
@@ -83,6 +88,9 @@
 
 .newsContent {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .newsDate {
@@ -109,6 +117,8 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  flex: 1;
+  transition: all 0.3s ease;
 }
 
 .readMore {
@@ -121,6 +131,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0.9rem;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .readMore:hover {

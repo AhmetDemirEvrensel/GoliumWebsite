@@ -1,39 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Header from "../../components/Header";
 import styles from "./page.module.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-  };
-
   return (
     <div className={styles.page}>
       <Header />
@@ -53,8 +21,8 @@ export default function Contact() {
                 <div className={styles.infoCard}>
                   <div className={styles.infoIcon}>📧</div>
                   <h3>E-posta</h3>
-                  <p>info@futbolturnuvasi.com</p>
-                  <p>destek@futbolturnuvasi.com</p>
+                  <p>info@golium.com</p>
+                  <p>destek@golium.com</p>
                 </div>
 
                 <div className={styles.infoCard}>
@@ -65,10 +33,10 @@ export default function Contact() {
                 </div>
 
                 <div className={styles.infoCard}>
-                  <div className={styles.infoIcon}>📍</div>
-                  <h3>Adres</h3>
-                  <p>Spor Kompleksi</p>
-                  <p>Sarıyer/İstanbul</p>
+                  <div className={styles.infoIcon}>�</div>
+                  <h3>WhatsApp</h3>
+                  <p>+90 555 123 4567</p>
+                  <p>Hızlı iletişim için</p>
                 </div>
 
                 <div className={styles.infoCard}>
@@ -88,128 +56,60 @@ export default function Contact() {
                   <a href="#" className={styles.socialLink}>YouTube</a>
                 </div>
               </div>
-            </div>
 
-            <div className={styles.contactForm}>
-              <h2>Mesaj Gönder</h2>
-              <form onSubmit={handleSubmit}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="name">Ad Soyad *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className={styles.formInput}
-                    placeholder="Adınız ve soyadınız"
-                  />
-                </div>
-
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="email">E-posta *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className={styles.formInput}
-                      placeholder="ornek@email.com"
-                    />
+              <div className={styles.faqSection}>
+                <h2>Sık Sorulan Sorular</h2>
+                <div className={styles.faqGrid}>
+                  <div className={styles.faqCard}>
+                    <h3>Takım kaydı nasıl yapılır?</h3>
+                    <p>
+                      Takım kaydı için iletişim formunu kullanabilir veya doğrudan telefon ile 
+                      bize ulaşabilirsiniz. Her takımın bir başkanı olmak zorundadır ve 
+                      minimum 20 oyuncu kadrosu gereklidir.
+                    </p>
                   </div>
 
-                  <div className={styles.formGroup}>
-                    <label htmlFor="phone">Telefon</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className={styles.formInput}
-                      placeholder="0555 123 4567"
-                    />
+                  <div className={styles.faqCard}>
+                    <h3>Kayıt ücreti ne kadardır?</h3>
+                    <p>
+                      Kişi başı katılım ücreti 1.000 TL'dir. Takım başı minimum 20 oyuncu ile 
+                      20.000 TL minimum ödeme gereklidir. Bu ücret hakem giderleri, saha kirası 
+                      ve organizasyon masraflarını kapsamaktadır.
+                    </p>
+                  </div>
+
+                  <div className={styles.faqCard}>
+                    <h3>Turnuva formatı nasıldır?</h3>
+                    <p>
+                      32 takım, 8 grupta mücadele edecek. Grup liderleri çeyrek finale yükselecek. 
+                      Maçlar 11'e 11 formatında, 60 dakika süresince oynanacaktır.
+                    </p>
+                  </div>
+
+                  <div className={styles.faqCard}>
+                    <h3>Ödüller nelerdir?</h3>
+                    <p>
+                      1. Takım: 150.000 TL + Sonraki turnuvaya ücretsiz katılım,
+                      2. ve 3. Takımlar: Sonraki turnuvaya ücretsiz katılım hakkı kazanacaktır.
+                    </p>
+                  </div>
+
+                  <div className={styles.faqCard}>
+                    <h3>Aktif lisanslı oyuncular oynayabilir mi?</h3>
+                    <p>
+                      Hayır, son 1 yıl içinde TFF lisanslı maçta oynamış oyuncular 
+                      turnuvaya katılamaz. Bu durumda takım hükmen mağlup sayılır.
+                    </p>
+                  </div>
+
+                  <div className={styles.faqCard}>
+                    <h3>Maç süresi ve oyuncu değişikliği kuralları?</h3>
+                    <p>
+                      Maçlar 60 dakika sürer. Maksimum 5 oyuncu değişikliği yapılabilir. 
+                      Çıkan oyuncu tekrar oyuna giremez.
+                    </p>
                   </div>
                 </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="subject">Konu *</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className={styles.formSelect}
-                  >
-                    <option value="">Konu seçiniz</option>
-                    <option value="kayit">Takım Kaydı</option>
-                    <option value="kurallar">Turnuva Kuralları</option>
-                    <option value="sahalar">Saha Bilgileri</option>
-                    <option value="odeme">Ödeme İşlemleri</option>
-                    <option value="teknik">Teknik Destek</option>
-                    <option value="diger">Diğer</option>
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="message">Mesaj *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    className={styles.formTextarea}
-                    placeholder="Mesajınızı buraya yazınız..."
-                    rows={5}
-                  />
-                </div>
-
-                <button type="submit" className={styles.submitButton}>
-                  Mesajı Gönder
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div className={styles.faqSection}>
-            <h2>Sık Sorulan Sorular</h2>
-            <div className={styles.faqGrid}>
-              <div className={styles.faqCard}>
-                <h3>Takım kaydı nasıl yapılır?</h3>
-                <p>
-                  Takım kaydı için iletişim formunu kullanabilir veya doğrudan telefon ile 
-                  bize ulaşabilirsiniz. Gerekli evraklar ve kayıt ücreti hakkında bilgi verilecektir.
-                </p>
-              </div>
-
-              <div className={styles.faqCard}>
-                <h3>Kayıt ücreti ne kadardır?</h3>
-                <p>
-                  Takım başına kayıt ücreti 2.500 TL'dir. Bu ücret hakem giderleri, 
-                  saha kirası ve organizasyon masraflarını kapsamaktadır.
-                </p>
-              </div>
-
-              <div className={styles.faqCard}>
-                <h3>Maçlar hangi sahalarda oynanacak?</h3>
-                <p>
-                  Maçlar İstanbul çevresindeki profesyonel futbol sahalarında oynanacaktır. 
-                  Detaylı saha listesi kayıt tamamlandıktan sonra paylaşılacaktır.
-                </p>
-              </div>
-
-              <div className={styles.faqCard}>
-                <h3>Ödül ödemeleri ne zaman yapılacak?</h3>
-                <p>
-                  Ödüller turnuva bitiş töreninde nakit olarak takımlara teslim edilecektir. 
-                  Herhangi bir kesinti yapılmayacaktır.
-                </p>
               </div>
             </div>
           </div>

@@ -7,101 +7,72 @@ export default function AboutUs() {
       <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Biz Kimiz</h1>
-          
           <div className={styles.contentContainer}>
-            <section className={styles.introSection}>
-              <h2>Misyonumuz</h2>
-              <p>
-                2010 yılından bu yana Türkiye'nin en prestijli futbol turnuvalarını organize eden 
-                ekibimiz, sporun birleştirici gücüne inanıyor. Amacımız, profesyonel ve amatör 
-                takımları bir araya getirerek, futbol severlere unutulmaz deneyimler yaşatmak.
-              </p>
-            </section>
-
-            <section className={styles.visionSection}>
-              <h2>Vizyonumuz</h2>
-              <p>
-                Türkiye'nin en büyük ve en kaliteli futbol turnuvalarının organizatörü olmak. 
-                Her yaştan ve seviyeden futbolcuya eşit fırsatlar sunarak, sporun gelişimine 
-                katkıda bulunmak en büyük hedefimiz.
-              </p>
-            </section>
-
-            <div className={styles.statsSection}>
-              <h2>Rakamlarla Biz</h2>
-              <div className={styles.statsGrid}>
-                <div className={styles.statCard}>
-                  <div className={styles.statNumber}>15</div>
-                  <div className={styles.statLabel}>Yıllık Deneyim</div>
-                </div>
-                <div className={styles.statCard}>
-                  <div className={styles.statNumber}>500+</div>
-                  <div className={styles.statLabel}>Organize Edilen Turnuva</div>
-                </div>
-                <div className={styles.statCard}>
-                  <div className={styles.statNumber}>10.000+</div>
-                  <div className={styles.statLabel}>Katılımcı Takım</div>
-                </div>
-                <div className={styles.statCard}>
-                  <div className={styles.statNumber}>50.000+</div>
-                  <div className={styles.statLabel}>Mutlu Futbolcu</div>
-                </div>
-              </div>
-            </div>
-
-            <section className={styles.teamSection}>
-              <h2>Ekibimiz</h2>
-              <div className={styles.teamGrid}>
-                <div className={styles.memberCard}>
-                  <div className={styles.memberPhoto}></div>
-                  <h3>Ahmet Yılmaz</h3>
-                  <p className={styles.memberRole}>Genel Koordinatör</p>
-                  <p className={styles.memberDesc}>
-                    15 yıllık deneyimi ile turnuva organizasyonlarının başında yer alıyor.
-                  </p>
-                </div>
-                <div className={styles.memberCard}>
-                  <div className={styles.memberPhoto}></div>
-                  <h3>Mehmet Kaya</h3>
-                  <p className={styles.memberRole}>Sahalar Sorumlusu</p>
-                  <p className={styles.memberDesc}>
-                    Tüm saha rezervasyonları ve teknik düzenlemeleri koordine ediyor.
-                  </p>
-                </div>
-                <div className={styles.memberCard}>
-                  <div className={styles.memberPhoto}></div>
-                  <h3>Fatma Demir</h3>
-                  <p className={styles.memberRole}>Kayıt ve İletişim</p>
-                  <p className={styles.memberDesc}>
-                    Takım kayıtları ve katılımcı iletişiminden sorumlu.
-                  </p>
-                </div>
+            <section className={styles.aboutSection}>
+              <h2 className={styles.sectionTitle}>Golium Hakkında</h2>
+              <div className={styles.aboutContent}>
+                <p>
+                  Golium, Türkiye'nin en prestijli futbol turnuvalarından biridir. 150.000 TL toplam
+                  ödül havuzu ile düzenlenen bu dev organizasyon, profesyonel ve amatör takımları bir
+                  araya getirerek futbol severlere unutulmaz deneyimler yaşatmayı hedefliyor.
+                </p>
+                <p>
+                  Turnuva, fair play ruhunu ön planda tutarak, her seviyeden futbol takımına eşit
+                  fırsatlar sunmaktadır. Modern stadyumlarda, profesyonel hakemler eşliğinde oynanan
+                  maçlar, katılımcılara gerçek bir turnuva deneyimi yaşatacaktır.
+                </p>
               </div>
             </section>
 
-            <section className={styles.valuesSection}>
-              <h2>Değerlerimiz</h2>
-              <div className={styles.valuesGrid}>
-                <div className={styles.valueCard}>
-                  <div className={styles.valueIcon}>⚽</div>
+            <section className={styles.missionSection}>
+              <h2 className={styles.sectionTitle}>Misyonumuz</h2>
+              <div className={styles.missionContent}>
+                <p>
+                  Golium, amatör ruhu profesyonel heyecanla buluşturmayı amaçlayan özel bir futbol
+                  organizasyonudur. Amacımız, her seviyeden futbol takımını bir araya getirerek,
+                  katılımcılara unutulmaz bir turnuva deneyimi yaşatmaktır.
+                </p>
+                <p>
+                  150.000 TL toplam ödül havuzu ile düzenlenen turnuvamız, fair play ruhunu ön planda
+                  tutarak, sporun birleştirici gücünü ortaya çıkarmayı hedefler. Modern sahalar,
+                  profesyonel hakemler ve titizlikle hazırlanmış organizasyon ile futbolun gerçek
+                  heyecanını yaşatmaya devam ediyoruz.
+                </p>
+              </div>
+            </section>
+
+            <section className={styles.featuresSection}>
+              <h2 className={styles.sectionTitle}>Turnuva Özellikleri</h2>
+              <div className={styles.featuresGrid}>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>🏟️</div>
+                  <h3>Modern Sahalar</h3>
+                  <p>Profesyonel standartlarda, modern donanımlı sahalar</p>
+                </div>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>👨‍⚖️</div>
+                  <h3>Deneyimli Hakemler</h3>
+                  <p>Federasyon belgeli, deneyimli hakem kadrosu</p>
+                </div>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>🏅</div>
                   <h3>Fair Play</h3>
-                  <p>Adalet ve sportmenlik her zaman önceliğimizdir.</p>
+                  <p>Sportmenlik ve adalet ön planda</p>
                 </div>
-                <div className={styles.valueCard}>
-                  <div className={styles.valueIcon}>🤝</div>
-                  <h3>Takım Ruhu</h3>
-                  <p>Birlikte hareket ederek en iyi sonuçları elde ederiz.</p>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>📊</div>
+                  <h3>Canlı Skor</h3>
+                  <p>Anlık skorlar ve istatistikler</p>
                 </div>
-                <div className={styles.valueCard}>
-                  <div className={styles.valueIcon}>🏆</div>
-                  <h3>Kalite</h3>
-                  <p>Her detayda mükemmelliği hedefleriz.</p>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>�</div>
+                  <h3>Kayıt Sistemi</h3>
+                  <p>Dijital kayıt ve takip sistemi</p>
                 </div>
-                <div className={styles.valueCard}>
-                  <div className={styles.valueIcon}>💯</div>
-                  <h3>Güvenilirlik</h3>
-                  <p>Sözümüzün arkasında dururuz.</p>
+                <div className={styles.featureCard}>
+                  <div className={styles.featureIcon}>🎁</div>
+                  <h3>Ödüller</h3>
+                  <p>Şampiyonluk ve bireysel ödüller</p>
                 </div>
               </div>
             </section>
@@ -109,18 +80,37 @@ export default function AboutUs() {
             <section className={styles.contactSection}>
               <h2>Bizimle İletişime Geçin</h2>
               <p>
-                Sorularınız, önerileriniz veya iş birliği teklifleriniz için 
-                bizimle iletişime geçmekten çekinmeyin.
+                Golium turnuvası hakkında detaylı bilgi almak ve başvuru yapmak için 
+                aşağıdaki iletişim kanallarını kullanabilirsiniz.
               </p>
               <div className={styles.contactInfo}>
                 <div className={styles.contactItem}>
-                  <strong>E-posta:</strong> info@futbolturnuvasi.com
+                  <div className={styles.contactIcon}>📧</div>
+                  <div className={styles.contactText}>
+                    <strong>E-posta</strong>
+                    <span>info@golium.com</span>
+                  </div>
                 </div>
                 <div className={styles.contactItem}>
-                  <strong>Telefon:</strong> +90 555 123 4567
+                  <div className={styles.contactIcon}>📞</div>
+                  <div className={styles.contactText}>
+                    <strong>Telefon</strong>
+                    <span>+90 555 123 4567</span>
+                  </div>
                 </div>
                 <div className={styles.contactItem}>
-                  <strong>Adres:</strong> Spor Kompleksi, İstanbul
+                  <div className={styles.contactIcon}>💬</div>
+                  <div className={styles.contactText}>
+                    <strong>WhatsApp</strong>
+                    <span>+90 555 123 4567</span>
+                  </div>
+                </div>
+                <div className={styles.contactItem}>
+                  <div className={styles.contactIcon}>⏰</div>
+                  <div className={styles.contactText}>
+                    <strong>Çalışma Saatleri</strong>
+                    <span>Pazartesi - Cumartesi: 09:00 - 18:00</span>
+                  </div>
                 </div>
               </div>
             </section>

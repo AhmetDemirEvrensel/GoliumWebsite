@@ -16,7 +16,7 @@ export default function Header() {
             <div className={styles.logoContainer}>
               <Image
                 src="/royalcupheader.png"
-                alt="Royal Cup"
+                alt="Golium"
                 width={320}
                 height={160}
                 className={styles.logoImage}
