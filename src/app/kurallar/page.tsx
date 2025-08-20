@@ -31,7 +31,7 @@ export default function Rules() {
               <h3>Eleme Aşaması:</h3>
               <ul>
                 <li>Çeyrek final, yarı final ve final maçları tek maç eleme sistemiyle oynanacak.</li>
-                <li>Yarı finalde kaybeden takımlar 3.'lük maçına çıkacak.</li>
+                <li>Yarı finalde kaybeden takımlar 3.&apos;lük maçına çıkacak.</li>
               </ul>
             </section>
 

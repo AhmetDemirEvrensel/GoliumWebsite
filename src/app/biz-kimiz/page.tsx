@@ -12,7 +12,7 @@ export default function AboutUs() {
               <h2 className={styles.sectionTitle}>Golium Hakkında</h2>
               <div className={styles.aboutContent}>
                 <p>
-                  Golium, Türkiye'nin en prestijli futbol turnuvalarından biridir. 150.000 TL toplam
+                  Golium, Türkiye&apos;nin en prestijli futbol turnuvalarından biridir. 150.000 TL toplam
                   ödül havuzu ile düzenlenen bu dev organizasyon, profesyonel ve amatör takımları bir
                   araya getirerek futbol severlere unutulmaz deneyimler yaşatmayı hedefliyor.
                 </p>

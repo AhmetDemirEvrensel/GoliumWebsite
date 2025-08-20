@@ -47,7 +47,7 @@ export default function MatchesSection() {
       .then(response => response.json())
       .then(data => {
         const sortedNews = (data.news || [])
-          .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .sort((a: NewsItem, b: NewsItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .slice(0, 3);
         setLatestNews(sortedNews);
       })

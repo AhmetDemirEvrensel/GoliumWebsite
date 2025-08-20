@@ -48,7 +48,7 @@ export default function Contact() {
                   <div className={styles.faqCard}>
                     <h3>Kayıt ücreti ne kadardır?</h3>
                     <p>
-                      Kişi başı katılım ücreti 1.000 TL'dir. Takım başı minimum 20 oyuncu ile 
+                      Kişi başı katılım ücreti 1.000 TL&apos;dir. Takım başı minimum 20 oyuncu ile 
                       20.000 TL minimum ödeme gereklidir. Bu ücret hakem giderleri, saha kirası 
                       ve organizasyon masraflarını kapsamaktadır.
                     </p>
@@ -58,7 +58,7 @@ export default function Contact() {
                     <h3>Turnuva formatı nasıldır?</h3>
                     <p>
                       32 takım, 8 grupta mücadele edecek. Grup liderleri çeyrek finale yükselecek. 
-                      Maçlar 11'e 11 formatında, 60 dakika süresince oynanacaktır.
+                      Maçlar 11&apos;e 11 formatında, 60 dakika süresince oynanacaktır.
                     </p>
                   </div>
 
