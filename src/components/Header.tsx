@@ -15,7 +15,7 @@ export default function Header() {
           <Link href="/">
             <div className={styles.logoContainer}>
               <Image
-                src="/royalcupheader.png"
+                src="/goliumicon.png"
                 alt="Golium"
                 width={320}
                 height={160}

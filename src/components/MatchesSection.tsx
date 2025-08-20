@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './MatchesSection.module.css';
 
 interface Match {
@@ -10,148 +10,188 @@ interface Match {
   date: string;
   time: string;
   stadium: string;
+  group: string;
   week: number;
+  status: string;
 }
 
-const mockMatches: Match[] = [
-  { id: 1, homeTeam: "Galatasaray", awayTeam: "Fenerbahçe", date: "22 Temmuz", time: "20:00", stadium: "Türk Telekom Stadyumu", week: 1 },
-  { id: 2, homeTeam: "Beşiktaş", awayTeam: "Trabzonspor", date: "22 Temmuz", time: "17:30", stadium: "Vodafone Park", week: 1 },
-  { id: 3, homeTeam: "Real Madrid", awayTeam: "Barcelona", date: "23 Temmuz", time: "21:00", stadium: "Santiago Bernabeu", week: 1 },
-  { id: 4, homeTeam: "Manchester City", awayTeam: "Liverpool", date: "23 Temmuz", time: "19:00", stadium: "Etihad Stadium", week: 1 },
-  { id: 5, homeTeam: "Bayern München", awayTeam: "Borussia Dortmund", date: "24 Temmuz", time: "20:30", stadium: "Allianz Arena", week: 1 },
-  { id: 6, homeTeam: "PSG", awayTeam: "Olympique Marseille", date: "24 Temmuz", time: "22:00", stadium: "Parc des Princes", week: 1 },
-  { id: 7, homeTeam: "Juventus", awayTeam: "AC Milan", date: "25 Temmuz", time: "21:30", stadium: "Allianz Stadium", week: 1 },
-  { id: 8, homeTeam: "Chelsea", awayTeam: "Arsenal", date: "25 Temmuz", time: "18:00", stadium: "Stamford Bridge", week: 1 },
-  
-  // Next week matches
-  { id: 9, homeTeam: "Fenerbahçe", awayTeam: "Beşiktaş", date: "29 Temmuz", time: "20:00", stadium: "Şükrü Saracoğlu", week: 2 },
-  { id: 10, homeTeam: "Trabzonspor", awayTeam: "Galatasaray", date: "29 Temmuz", time: "17:30", stadium: "Medical Park Stadyumu", week: 2 },
-  { id: 11, homeTeam: "Barcelona", awayTeam: "Manchester City", date: "30 Temmuz", time: "21:00", stadium: "Camp Nou", week: 2 },
-  { id: 12, homeTeam: "Liverpool", awayTeam: "Bayern München", date: "30 Temmuz", time: "19:00", stadium: "Anfield", week: 2 },
-  { id: 13, homeTeam: "Borussia Dortmund", awayTeam: "PSG", date: "31 Temmuz", time: "20:30", stadium: "Signal Iduna Park", week: 2 },
-  { id: 14, homeTeam: "Olympique Marseille", awayTeam: "Juventus", date: "31 Temmuz", time: "22:00", stadium: "Orange Vélodrome", week: 2 },
-  { id: 15, homeTeam: "AC Milan", awayTeam: "Chelsea", date: "1 Ağustos", time: "21:30", stadium: "San Siro", week: 2 },
-  { id: 16, homeTeam: "Arsenal", awayTeam: "Real Madrid", date: "1 Ağustos", time: "18:00", stadium: "Emirates Stadium", week: 2 },
-];
+interface NewsItem {
+  id: number;
+  title: string;
+  date: string;
+}
 
 export default function MatchesSection() {
-  const [currentWeekIndex, setCurrentWeekIndex] = useState(0);
-  const [nextWeekIndex, setNextWeekIndex] = useState(0);
+  const [thisWeekMatches, setThisWeekMatches] = useState<Match[]>([]);
+  const [nextWeekMatches, setNextWeekMatches] = useState<Match[]>([]);
+  const [latestNews, setLatestNews] = useState<NewsItem[]>([]);
+  const [thisWeekPage, setThisWeekPage] = useState(0);
+  const [nextWeekPage, setNextWeekPage] = useState(0);
+  
+  const MATCHES_PER_PAGE = 6;
 
-  const thisWeekMatches = mockMatches.filter(match => match.week === 1);
-  const nextWeekMatches = mockMatches.filter(match => match.week === 2);
+  useEffect(() => {
+    // JSON dosyasından maçları yükle
+    fetch('/data/matches.json')
+      .then(response => response.json())
+      .then(data => {
+        setThisWeekMatches(data.thisWeekMatches || []);
+        setNextWeekMatches(data.nextWeekMatches || []);
+      })
+      .catch(error => {
+        console.error('Maçlar yüklenirken hata:', error);
+      });
 
-  const visibleThisWeek = thisWeekMatches.slice(currentWeekIndex * 4, (currentWeekIndex * 4) + 4);
-  const visibleNextWeek = nextWeekMatches.slice(nextWeekIndex * 4, (nextWeekIndex * 4) + 4);
+    // JSON dosyasından haberleri yükle (son 3 haber)
+    fetch('/data/news.json')
+      .then(response => response.json())
+      .then(data => {
+        const sortedNews = (data.news || [])
+          .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .slice(0, 3);
+        setLatestNews(sortedNews);
+      })
+      .catch(error => {
+        console.error('Haberler yüklenirken hata:', error);
+      });
+  }, []);
 
-  const nextThisWeek = () => {
-    if ((currentWeekIndex + 1) * 4 < thisWeekMatches.length) {
-      setCurrentWeekIndex(currentWeekIndex + 1);
+  // Bu haftanın maçları için pagination
+  const thisWeekStartIndex = thisWeekPage * MATCHES_PER_PAGE;
+  const thisWeekEndIndex = thisWeekStartIndex + MATCHES_PER_PAGE;
+  const thisWeekVisibleMatches = thisWeekMatches.slice(thisWeekStartIndex, thisWeekEndIndex);
+  const thisWeekTotalPages = Math.ceil(thisWeekMatches.length / MATCHES_PER_PAGE);
+
+  // Gelecek haftanın maçları için pagination
+  const nextWeekStartIndex = nextWeekPage * MATCHES_PER_PAGE;
+  const nextWeekEndIndex = nextWeekStartIndex + MATCHES_PER_PAGE;
+  const nextWeekVisibleMatches = nextWeekMatches.slice(nextWeekStartIndex, nextWeekEndIndex);
+  const nextWeekTotalPages = Math.ceil(nextWeekMatches.length / MATCHES_PER_PAGE);
+
+  const nextThisWeekPage = () => {
+    if (thisWeekPage < thisWeekTotalPages - 1) {
+      setThisWeekPage(thisWeekPage + 1);
     }
   };
 
-  const prevThisWeek = () => {
-    if (currentWeekIndex > 0) {
-      setCurrentWeekIndex(currentWeekIndex - 1);
+  const prevThisWeekPage = () => {
+    if (thisWeekPage > 0) {
+      setThisWeekPage(thisWeekPage - 1);
     }
   };
 
-  const nextNextWeek = () => {
-    if ((nextWeekIndex + 1) * 4 < nextWeekMatches.length) {
-      setNextWeekIndex(nextWeekIndex + 1);
+  const nextNextWeekPage = () => {
+    if (nextWeekPage < nextWeekTotalPages - 1) {
+      setNextWeekPage(nextWeekPage + 1);
     }
   };
 
-  const prevNextWeek = () => {
-    if (nextWeekIndex > 0) {
-      setNextWeekIndex(nextWeekIndex - 1);
+  const prevNextWeekPage = () => {
+    if (nextWeekPage > 0) {
+      setNextWeekPage(nextWeekPage - 1);
     }
   };
 
   return (
     <section className={styles.matchesSection}>
-      <div className={styles.weekSection}>
-        <div className={styles.weekHeader}>
-          <h2>Bu Haftanın Maçları</h2>
-          <div className={styles.navigation}>
-            <button 
-              onClick={prevThisWeek} 
-              disabled={currentWeekIndex === 0}
-              className={styles.navButton}
-            >
-              &#8249;
-            </button>
-            <button 
-              onClick={nextThisWeek} 
-              disabled={(currentWeekIndex + 1) * 4 >= thisWeekMatches.length}
-              className={styles.navButton}
-            >
-              &#8250;
-            </button>
+      {/* Bu Haftanın Maçları */}
+      {thisWeekMatches.length > 0 && (
+        <div className={styles.weekSection}>
+          <div className={styles.weekHeader}>
+            <h2>Bu Haftanın Maçları</h2>
+            {thisWeekMatches.length > MATCHES_PER_PAGE && (
+              <div className={styles.navigation}>
+                <button 
+                  onClick={prevThisWeekPage} 
+                  disabled={thisWeekPage === 0}
+                  className={styles.navButton}
+                >
+                  &#8249;
+                </button>
+                <span className={styles.pageInfo}>
+                  {thisWeekPage + 1} / {thisWeekTotalPages}
+                </span>
+                <button 
+                  onClick={nextThisWeekPage} 
+                  disabled={thisWeekPage >= thisWeekTotalPages - 1}
+                  className={styles.navButton}
+                >
+                  &#8250;
+                </button>
+              </div>
+            )}
+          </div>
+          <div className={styles.matchesGrid}>
+            {thisWeekVisibleMatches.map((match) => (
+              <div key={match.id} className={styles.matchCard}>
+                <div className={styles.teams}>
+                  <span className={styles.homeTeam}>{match.homeTeam}</span>
+                  <span className={styles.vs}>VS</span>
+                  <span className={styles.awayTeam}>{match.awayTeam}</span>
+                </div>
+                <div className={styles.matchInfo}>
+                  <div className={styles.datetime}>
+                    <span className={styles.date}>{match.date}</span>
+                    <span className={styles.time}>{match.time}</span>
+                  </div>
+                  <div className={styles.stadium}>{match.stadium}</div>
+                  <div className={styles.group}>Grup {match.group}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        
-        <div className={styles.matchesGrid}>
-          {visibleThisWeek.map((match) => (
-            <div key={match.id} className={styles.matchCard}>
-              <div className={styles.teams}>
-                <span className={styles.homeTeam}>{match.homeTeam}</span>
-                <span className={styles.vs}>VS</span>
-                <span className={styles.awayTeam}>{match.awayTeam}</span>
-              </div>
-              <div className={styles.matchInfo}>
-                <div className={styles.datetime}>
-                  <span className={styles.date}>{match.date}</span>
-                  <span className={styles.time}>{match.time}</span>
-                </div>
-                <div className={styles.stadium}>{match.stadium}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      )}
 
-      <div className={styles.weekSection}>
-        <div className={styles.weekHeader}>
-          <h2>Gelecek Haftanın Maçları</h2>
-          <div className={styles.navigation}>
-            <button 
-              onClick={prevNextWeek} 
-              disabled={nextWeekIndex === 0}
-              className={styles.navButton}
-            >
-              &#8249;
-            </button>
-            <button 
-              onClick={nextNextWeek} 
-              disabled={(nextWeekIndex + 1) * 4 >= nextWeekMatches.length}
-              className={styles.navButton}
-            >
-              &#8250;
-            </button>
+      {/* Gelecek Haftanın Maçları */}
+      {nextWeekMatches.length > 0 && (
+        <div className={styles.weekSection}>
+          <div className={styles.weekHeader}>
+            <h2>Gelecek Haftanın Maçları</h2>
+            {nextWeekMatches.length > MATCHES_PER_PAGE && (
+              <div className={styles.navigation}>
+                <button 
+                  onClick={prevNextWeekPage} 
+                  disabled={nextWeekPage === 0}
+                  className={styles.navButton}
+                >
+                  &#8249;
+                </button>
+                <span className={styles.pageInfo}>
+                  {nextWeekPage + 1} / {nextWeekTotalPages}
+                </span>
+                <button 
+                  onClick={nextNextWeekPage} 
+                  disabled={nextWeekPage >= nextWeekTotalPages - 1}
+                  className={styles.navButton}
+                >
+                  &#8250;
+                </button>
+              </div>
+            )}
+          </div>
+          <div className={styles.matchesGrid}>
+            {nextWeekVisibleMatches.map((match) => (
+              <div key={match.id} className={styles.matchCard}>
+                <div className={styles.teams}>
+                  <span className={styles.homeTeam}>{match.homeTeam}</span>
+                  <span className={styles.vs}>VS</span>
+                  <span className={styles.awayTeam}>{match.awayTeam}</span>
+                </div>
+                <div className={styles.matchInfo}>
+                  <div className={styles.datetime}>
+                    <span className={styles.date}>{match.date}</span>
+                    <span className={styles.time}>{match.time}</span>
+                  </div>
+                  <div className={styles.stadium}>{match.stadium}</div>
+                  <div className={styles.group}>Grup {match.group}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        
-        <div className={styles.matchesGrid}>
-          {visibleNextWeek.map((match) => (
-            <div key={match.id} className={styles.matchCard}>
-              <div className={styles.teams}>
-                <span className={styles.homeTeam}>{match.homeTeam}</span>
-                <span className={styles.vs}>VS</span>
-                <span className={styles.awayTeam}>{match.awayTeam}</span>
-              </div>
-              <div className={styles.matchInfo}>
-                <div className={styles.datetime}>
-                  <span className={styles.date}>{match.date}</span>
-                  <span className={styles.time}>{match.time}</span>
-                </div>
-                <div className={styles.stadium}>{match.stadium}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      )}
+      
       <div className={styles.additionalSection}>
         <div className={styles.statsSection}>
           <h2>Turnuva İstatistikleri</h2>
@@ -169,7 +209,7 @@ export default function MatchesSection() {
               <div className={styles.statLabel}>Ödül</div>
             </div>
             <div className={styles.statCard}>
-              <div className={styles.statNumber}>64</div>
+              <div className={styles.statNumber}>{thisWeekMatches.length + nextWeekMatches.length}</div>
               <div className={styles.statLabel}>Maç</div>
             </div>
           </div>
@@ -178,18 +218,12 @@ export default function MatchesSection() {
         <div className={styles.newsSection}>
           <h2>Son Haberler</h2>
           <div className={styles.newsList}>
-            <div className={styles.newsItem}>
-              <span className={styles.newsDate}>18 Temmuz 2025</span>
-              <span className={styles.newsTitle}>Turnuva başvuruları tamamlandı!</span>
-            </div>
-            <div className={styles.newsItem}>
-              <span className={styles.newsDate}>17 Temmuz 2025</span>
-              <span className={styles.newsTitle}>Grup kuraları çekildi</span>
-            </div>
-            <div className={styles.newsItem}>
-              <span className={styles.newsDate}>16 Temmuz 2025</span>
-              <span className={styles.newsTitle}>Stadyum rezervasyonları tamamlandı</span>
-            </div>
+            {latestNews.map((news) => (
+              <div key={news.id} className={styles.newsItem}>
+                <span className={styles.newsDate}>{news.date}</span>
+                <span className={styles.newsTitle}>{news.title}</span>
+              </div>
+            ))}
           </div>
           <div className={styles.newsButtonContainer}>
             <a href="/haberler" className={styles.allNewsButton}>

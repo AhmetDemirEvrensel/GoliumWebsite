@@ -117,18 +117,33 @@
 }
 
 .socialLink {
-  background: linear-gradient(135deg, #003D20 0%, #005533 100%);
+  background: linear-gradient(135deg, #E4405F 0%, #C13584 100%);
   color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
+  padding: 1rem 2rem;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(196, 53, 132, 0.3);
 }
 
 .socialLink:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 61, 32, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(196, 53, 132, 0.4);
+  background: linear-gradient(135deg, #C13584 0%, #833AB4 100%);
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #003D20 20%, #003D20 80%, transparent 100%);
+  margin: 3rem 0;
+  border-radius: 1px;
+  opacity: 0.3;
 }
 
 .faqSection {
@@ -209,12 +224,17 @@
   }
   
   .infoCards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
   .socialLinks {
     flex-wrap: wrap;
+  }
+
+  .socialLink {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
   
   .faqGrid {

@@ -1,0 +1,30 @@
+{
+    "_updateScript": "npm run update-data",
+    "fixtures": {
+        "A": [],
+        "B": [],
+        "C": [],
+        "D": [],
+        "E": [],
+        "F": [],
+        "G": [],
+        "H": []
+    },
+    "lastUpdated": "20 Ağustos 2025",
+    "instructions": {
+        "note": "Bu dosya grup fikstürlerini saklar",
+        "format": "Her maç için: id, homeTeam, awayTeam, homeScore, awayScore, date, time, played, stadium, group",
+        "example": {
+            "id": 1,
+            "homeTeam": "Galatasaray",
+            "awayTeam": "Fenerbahçe",
+            "homeScore": 2,
+            "awayScore": 1,
+            "date": "22 Ağustos",
+            "time": "20:00",
+            "played": true,
+            "stadium": "Türk Telekom Stadyumu",
+            "group": "A"
+        }
+    }
+}

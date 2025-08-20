@@ -1,0 +1,43 @@
+{
+  "_updateScript": "npm run update-data",
+  "goalScorers": [
+    {
+      "id": 1,
+      "name": "Bekleniyor",
+      "team": "Bekleniyor",
+      "goals": 0,
+      "matches": 0
+    }
+  ],
+  "assistProviders": [
+    {
+      "id": 1,
+      "name": "Bekleniyor",
+      "team": "Bekleniyor",
+      "assists": 0,
+      "matches": 0
+    }
+  ],
+  "lastUpdated": "20 Ağustos 2025",
+  "instructions": {
+    "note": "Bu dosya gol ve asist krallığını saklar",
+    "format": "goalScorers: Her oyuncu için id, name, team, goals, matches",
+    "format2": "assistProviders: Her oyuncu için id, name, team, assists, matches",
+    "example": {
+      "goalScorer": {
+        "id": 1,
+        "name": "Cristiano Ronaldo",
+        "team": "Real Madrid",
+        "goals": 8,
+        "matches": 5
+      },
+      "assistProvider": {
+        "id": 1,
+        "name": "Kevin De Bruyne",
+        "team": "Manchester City",
+        "assists": 6,
+        "matches": 4
+      }
+    }
+  }
+}

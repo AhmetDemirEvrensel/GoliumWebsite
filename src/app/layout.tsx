@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Golium - 150.000 TL Ödüllü Futbol Turnuvası",
+  title: "Golium",
   description: "Golium futbol turnuvası - 8 grup, 32 takım ile düzenlenen prestijli turnuva. Şimdi kayıt olun!",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

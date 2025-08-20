@@ -7,7 +7,7 @@ export default function Rules() {
       <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>GOLİUM CUP Turnuva Kuralları</h1>
+          <h1 className={styles.title}>Golium Turnuva Kuralları</h1>
           
           <div className={styles.rulesContainer}>
             <section className={styles.ruleSection}>

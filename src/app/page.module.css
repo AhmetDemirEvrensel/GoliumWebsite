@@ -11,7 +11,7 @@
 
 .heroSection {
   position: relative;
-  min-height: 74vh;  /* Yesil olan golium cup tanitim yerinin heightini uzatir */
+  min-height: 70vh;  /* Yesil olan golium cup tanitim yerinin heightini uzatir */
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #003D20 0%, #005533 50%, #007744 100%);
@@ -131,8 +131,8 @@
   transition: all 0.5s ease;
   width: 100%;
   height: auto;
-  max-width: 600px;
-  max-height: 450px;
+  max-width: 500px;
+  max-height: 300px;
   position: relative;
   z-index: 2;
 }

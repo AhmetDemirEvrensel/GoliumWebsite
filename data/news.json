@@ -1,0 +1,44 @@
+{
+    "_updateScript": "npm run update-data",
+    "news": [
+        {
+            "id": 1,
+            "title": "Turnuva başvuruları başladı!",
+            "date": "20 Ağustos 2025",
+            "excerpt": "Golium turnuvası için tüm başvurular başladı. 32 takım katılacak.",
+            "content": "Turnuva başvuruları 20 Ağustos 2025 tarihinde başladı. Katılmak isteyen takımların başvurularını en geç 30 Ağustos 2025 tarihine kadar yapmaları gerekiyor. Turnuvaya katılacak takımlar arasında hem yerli hem de yabancı güçlü ekipler bulunuyor. Organizasyon komitesi, tüm hazırlıkların planlandığını ve turnuvanın unutulmaz bir deneyim olacağını belirtti.",
+            "category": "Genel",
+            "priority": "high"
+        }
+    ],
+    "lastUpdated": "20 Ağustos 2025",
+    "instructions": {
+        "note": "Bu dosya haber verilerini saklar",
+        "format": "Her haber için: id, title, date, excerpt, content, category, priority",
+        "categories": [
+            "Genel",
+            "Turnuva",
+            "Organizasyon",
+            "Ödüller",
+            "Kurallar",
+            "Tasarım",
+            "Toplantı",
+            "Sosyal Medya",
+            "Maç Sonuçları"
+        ],
+        "priorities": [
+            "high",
+            "medium",
+            "low"
+        ],
+        "example": {
+            "id": 1,
+            "title": "Örnek Haber Başlığı",
+            "date": "20 Ağustos 2025",
+            "excerpt": "Haberin kısa özeti...",
+            "content": "Haberin tam içeriği...",
+            "category": "Genel",
+            "priority": "high"
+        }
+    }
+}

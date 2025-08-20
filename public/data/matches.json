@@ -1,0 +1,49 @@
+{
+  "_updateScript": "npm run update-matches",
+  "thisWeekMatches": [
+    {
+      "id": 1,
+      "homeTeam": "Bekleniyor",
+      "awayTeam": "Bekleniyor",
+      "date": "?",
+      "time": "?",
+      "stadium": "?",
+      "group": "?",
+      "week": 1,
+      "status": "planned"
+    }
+  ],
+  "nextWeekMatches": [
+    {
+      "id": 2,
+      "homeTeam": "Bekleniyor",
+      "awayTeam": "Bekleniyor",
+      "date": "?",
+      "time": "?",
+      "stadium": "?",
+      "group": "?",
+      "week": 0,
+      "status": "planned"
+    }
+    
+  ],
+  "lastUpdated": "20 Ağustos 2025",
+  "totalMatches": 11,
+  "instructions": {
+    "note": "Bu dosya Golium turnuvası maçlarını saklar",
+    "format": "Her maç için: id, homeTeam, awayTeam, date, time, stadium, group, week, status",
+    "groups": ["A", "B", "C", "D", "E", "F", "G", "H"],
+    "statuses": ["planned", "live", "finished"],
+    "example": {
+      "id": 1,
+      "homeTeam": "Galatasaray",
+      "awayTeam": "Fenerbahçe",
+      "date": "25 Ağustos 2025",
+      "time": "20:00",
+      "stadium": "Türk Telekom Stadyumu",
+      "group": "A",
+      "week": 1,
+      "status": "planned"
+    }
+  }
+}

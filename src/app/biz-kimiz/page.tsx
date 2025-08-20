@@ -91,27 +91,6 @@ export default function AboutUs() {
                     <span>info@golium.com</span>
                   </div>
                 </div>
-                <div className={styles.contactItem}>
-                  <div className={styles.contactIcon}>📞</div>
-                  <div className={styles.contactText}>
-                    <strong>Telefon</strong>
-                    <span>+90 555 123 4567</span>
-                  </div>
-                </div>
-                <div className={styles.contactItem}>
-                  <div className={styles.contactIcon}>💬</div>
-                  <div className={styles.contactText}>
-                    <strong>WhatsApp</strong>
-                    <span>+90 555 123 4567</span>
-                  </div>
-                </div>
-                <div className={styles.contactItem}>
-                  <div className={styles.contactIcon}>⏰</div>
-                  <div className={styles.contactText}>
-                    <strong>Çalışma Saatleri</strong>
-                    <span>Pazartesi - Cumartesi: 09:00 - 18:00</span>
-                  </div>
-                </div>
               </div>
             </section>
           </div>

@@ -1,0 +1,46 @@
+{
+  "teams": [],
+  "groups": {
+    "A": [],
+    "B": [],
+    "C": [],
+    "D": [],
+    "E": [],
+    "F": [],
+    "G": [],
+    "H": []
+  },
+  "stadiums": [
+    {
+      "name": "Türk Telekom Stadyumu",
+      "city": "İstanbul",
+      "capacity": 52650
+    },
+    {
+      "name": "Şükrü Saracoğlu Stadyumu", 
+      "city": "İstanbul",
+      "capacity": 50530
+    },
+    {
+      "name": "Vodafone Park",
+      "city": "İstanbul", 
+      "capacity": 41903
+    },
+    {
+      "name": "Medical Park Stadyumu",
+      "city": "Trabzon",
+      "capacity": 41461
+    }
+  ],
+  "instructions": {
+    "note": "Bu dosya takım ve stadyum bilgilerini saklar",
+    "teamFormat": "Takım ismi, grubu, şehri",
+    "addTeam": "Her grupta maksimum 4 takım olabilir",
+    "stadiumFormat": "Stadyum adı, şehir, kapasite",
+    "example": {
+      "team": "Galatasaray",
+      "group": "A",
+      "city": "İstanbul"
+    }
+  }
+}

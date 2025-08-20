@@ -26,6 +26,14 @@
 .navigation {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.pageInfo {
+  font-weight: 600;
+  color: #003D20;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
 }
 
 .navButton {

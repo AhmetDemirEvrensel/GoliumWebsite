@@ -17,45 +17,21 @@ export default function Contact() {
                 bizimle iletişime geçebilirsiniz. Ekibimiz size en kısa sürede dönüş yapacaktır.
               </p>
 
-              <div className={styles.infoCards}>
-                <div className={styles.infoCard}>
-                  <div className={styles.infoIcon}>📧</div>
-                  <h3>E-posta</h3>
-                  <p>info@golium.com</p>
-                  <p>destek@golium.com</p>
-                </div>
-
-                <div className={styles.infoCard}>
-                  <div className={styles.infoIcon}>📞</div>
-                  <h3>Telefon</h3>
-                  <p>+90 555 123 4567</p>
-                  <p>+90 555 765 4321</p>
-                </div>
-
-                <div className={styles.infoCard}>
-                  <div className={styles.infoIcon}>�</div>
-                  <h3>WhatsApp</h3>
-                  <p>+90 555 123 4567</p>
-                  <p>Hızlı iletişim için</p>
-                </div>
-
-                <div className={styles.infoCard}>
-                  <div className={styles.infoIcon}>⏰</div>
-                  <h3>Çalışma Saatleri</h3>
-                  <p>Pazartesi - Cumartesi</p>
-                  <p>09:00 - 18:00</p>
-                </div>
-              </div>
-
-              <div className={styles.socialSection}>
+                            <div className={styles.socialSection}>
                 <h3>Sosyal Medya</h3>
                 <div className={styles.socialLinks}>
-                  <a href="#" className={styles.socialLink}>Facebook</a>
-                  <a href="#" className={styles.socialLink}>Instagram</a>
-                  <a href="#" className={styles.socialLink}>Twitter</a>
-                  <a href="#" className={styles.socialLink}>YouTube</a>
+                  <a 
+                    href="https://www.instagram.com/goliumtr/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                  >
+                    📸 Instagram
+                  </a>
                 </div>
               </div>
+
+              <div className={styles.divider}></div>
 
               <div className={styles.faqSection}>
                 <h2>Sık Sorulan Sorular</h2>

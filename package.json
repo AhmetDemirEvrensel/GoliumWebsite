@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-matches": "./update-matches.sh",
+    "update-data": "./update-all-data.sh",
+    "update-all": "./update-all-data.sh && echo '🔄 Veriler güncellendi! Sayfayı yenileyin.'"
   },
   "dependencies": {
     "react": "19.1.0",
