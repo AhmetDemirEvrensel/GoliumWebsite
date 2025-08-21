@@ -251,8 +251,13 @@
 }
 
 @media (max-width: 768px) {
+  .matchesSection {
+    padding: 2rem 0;
+  }
+  
   .weekSection {
     padding: 0 1rem;
+    margin-bottom: 3rem;
   }
   
   .weekHeader {
@@ -267,6 +272,11 @@
   
   .matchesGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .matchCard {
+    padding: 1.2rem;
   }
   
   .additionalSection {
@@ -277,10 +287,19 @@
   
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .statCard {
+    padding: 1.2rem;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
   }
   
   .teams {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
   }
   
@@ -289,6 +308,74 @@
   }
   
   .vs {
-    margin: 0;
+    margin: 0 0.3rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .matchesSection {
+    padding: 1.5rem 0;
+  }
+  
+  .weekSection {
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .weekHeader h2 {
+    font-size: 1.3rem;
+  }
+  
+  .matchCard {
+    padding: 1rem;
+  }
+  
+  .additionalSection {
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .statsSection h2, .newsSection h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .statCard {
+    padding: 1rem;
+  }
+  
+  .statNumber {
+    font-size: 1.3rem;
+  }
+  
+  .statLabel {
+    font-size: 0.7rem;
+  }
+  
+  .newsItem {
+    padding: 0.8rem 1rem;
+  }
+  
+  .newsTitle {
+    font-size: 0.9rem;
+  }
+  
+  .homeTeam, .awayTeam {
+    font-size: 0.8rem;
+  }
+  
+  .vs {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+  }
+  
+  .stadium {
+    font-size: 0.8rem;
+  }
+  
+  .date, .time {
+    font-size: 0.8rem;
   }
 }

@@ -38,7 +38,7 @@ export default function Header() {
         </nav>
 
         <button 
-          className={styles.menuToggle}
+          className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -46,16 +46,14 @@ export default function Header() {
           <span></span>
         </button>
 
-        {isMenuOpen && (
-          <div className={styles.mobileMenu}>
-            <Link href="/" onClick={() => setIsMenuOpen(false)}>Anasayfa</Link>
-            <Link href="/kurallar" onClick={() => setIsMenuOpen(false)}>Kurallar</Link>
-            <Link href="/puan-durumu" onClick={() => setIsMenuOpen(false)}>Puan Durumu</Link>
-            <Link href="/haberler" onClick={() => setIsMenuOpen(false)}>Haberler</Link>
-            <Link href="/biz-kimiz" onClick={() => setIsMenuOpen(false)}>Biz Kimiz</Link>
-            <Link href="/iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</Link>
-          </div>
-        )}
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.active : ''}`}>
+          <Link href="/" onClick={() => setIsMenuOpen(false)}>Anasayfa</Link>
+          <Link href="/kurallar" onClick={() => setIsMenuOpen(false)}>Kurallar</Link>
+          <Link href="/puan-durumu" onClick={() => setIsMenuOpen(false)}>Puan Durumu</Link>
+          <Link href="/haberler" onClick={() => setIsMenuOpen(false)}>Haberler</Link>
+          <Link href="/biz-kimiz" onClick={() => setIsMenuOpen(false)}>Biz Kimiz</Link>
+          <Link href="/iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</Link>
+        </div>
       </div>
     </header>
   );

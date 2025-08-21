@@ -423,6 +423,43 @@
   font-weight: 600;
 }
 
+/* Mobile table scroll support */
+.standingsContainer .table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.statisticsContainer .playersTable {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tableHeader, .tableRow {
+  min-width: 600px;
+}
+
+.playersHeader, .playerRow {
+  min-width: 450px;
+}
+
+/* Touch scroll indicators */
+.table::-webkit-scrollbar, 
+.playersTable::-webkit-scrollbar {
+  height: 4px;
+}
+
+.table::-webkit-scrollbar-track,
+.playersTable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.table::-webkit-scrollbar-thumb,
+.playersTable::-webkit-scrollbar-thumb {
+  background: #003D20;
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -430,29 +467,209 @@
   
   .title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tabContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.3rem;
+  }
+  
+  .tab {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: fit-content;
+  }
+  
+  .groupSelector {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .groupButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .standingsContainer, .fixturesContainer, .statisticsContainer {
+    padding: 1rem;
+  }
+  
+  .table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .tableHeader, .tableRow {
+    grid-template-columns: 35px 2fr 45px 45px 45px 45px 45px 45px 50px 50px;
+    font-size: 0.75rem;
+    min-width: 600px;
+  }
+  
+  .headerCell, .cell {
+    padding: 0.6rem 0.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .teamCell {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .pointsCell {
+    padding: 0.6rem 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+  
+  .groupTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .matchCard {
+    padding: 1rem;
+  }
+  
+  .matchTeams {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .homeTeam, .awayTeam {
+    font-size: 0.85rem;
+    flex: 1;
+  }
+  
+  .scoreContainer {
+    flex: 0 0 80px;
+  }
+  
+  .score, .vs {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .statisticsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .statisticsSection {
+    padding: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+  
+  .playersTable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .playersHeader, .playerRow {
+    grid-template-columns: 40px 2fr 1.5fr 60px 50px;
+    font-size: 0.75rem;
+    min-width: 400px;
+  }
+  
+  .playerHeaderCell, .playerCell {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.75rem;
+  }
+  
+  .playerNameCell, .playerTeamCell {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .playerStatCell {
+    font-size: 0.85rem;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
   
   .tabContainer {
     flex-direction: column;
-    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .tab {
+    padding: 0.8rem;
+    font-size: 0.85rem;
   }
   
   .groupSelector {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
   }
   
-  .tableHeader, .tableRow {
-    grid-template-columns: 30px 1fr repeat(8, 40px);
+  .groupButton {
+    padding: 0.6rem 0.8rem;
     font-size: 0.8rem;
   }
   
+  .standingsContainer, .fixturesContainer, .statisticsContainer {
+    padding: 0.8rem;
+  }
+  
+  .tableHeader, .tableRow {
+    grid-template-columns: 30px 2fr 35px 35px 35px 35px 35px 35px 40px 45px;
+    font-size: 0.7rem;
+    min-width: 500px;
+  }
+  
   .headerCell, .cell {
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 0.1rem;
+    font-size: 0.7rem;
   }
   
   .teamCell {
-    padding: 0.5rem 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.8rem;
+  }
+  
+  .pointsCell {
+    padding: 0.5rem 0.1rem;
+    font-size: 0.85rem;
+  }
+  
+  .groupTitle {
+    font-size: 1.2rem;
   }
   
   .matchTeams {
@@ -461,29 +678,34 @@
   }
   
   .homeTeam, .awayTeam {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   
-  .statisticsGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .scoreContainer {
+    flex: 0 0 70px;
   }
   
   .playersHeader, .playerRow {
-    grid-template-columns: 30px 1fr 1fr 50px 40px;
-    font-size: 0.75rem;
+    grid-template-columns: 35px 2fr 1fr 50px 40px;
+    font-size: 0.7rem;
+    min-width: 350px;
   }
   
   .playerHeaderCell, .playerCell {
     padding: 0.5rem 0.2rem;
+    font-size: 0.7rem;
   }
   
   .playerNameCell, .playerTeamCell {
-    padding: 0.5rem 0.4rem;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.75rem;
+  }
+  
+  .playerStatCell {
     font-size: 0.8rem;
   }
   
   .sectionTitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }

@@ -15,12 +15,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 120px;
+  min-height: 80px;
+  position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  z-index: 1001;
 }
 
 .logoContainer {
@@ -36,7 +38,7 @@
 .logoImage {
   height: auto;
   transition: all 0.3s ease;
-  max-height: 120px;
+  max-height: 60px;
   width: auto;
 }
 
@@ -83,6 +85,8 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1002;
+  position: relative;
 }
 
 .menuToggle span {
@@ -94,6 +98,18 @@
   border-radius: 2px;
 }
 
+.menuToggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuToggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuToggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .mobileMenu {
   display: none;
   position: absolute;
@@ -103,6 +119,15 @@
   background: linear-gradient(135deg, #003D20 0%, #005533 100%);
   padding: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.mobileMenu.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mobileMenu a {
@@ -120,51 +145,20 @@
   padding-left: 1.5rem;
 }
 
-.menuToggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.menuToggle span {
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  margin: 3px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-
-.mobileMenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #003D20 0%, #005533 100%);
-  padding: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.mobileMenu a {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.mobileMenu a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  padding-left: 1.5rem;
+.mobileMenu a:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 768px) {
+  .container {
+    min-height: 70px;
+    padding: 0 1rem;
+  }
+
+  .logoImage {
+    max-height: 50px;
+  }
+
   .nav {
     display: none;
   }
@@ -172,20 +166,24 @@
   .menuToggle {
     display: flex;
   }
+}
 
-  .menuToggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+@media (max-width: 480px) {
+  .container {
+    min-height: 60px;
+    padding: 0 0.5rem;
   }
 
-  .menuToggle.active span:nth-child(2) {
-    opacity: 0;
+  .logoImage {
+    max-height: 45px;
   }
 
-  .menuToggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+  .mobileMenu {
+    padding: 0.5rem;
   }
 
-  .mobileMenu.active {
-    display: block;
+  .mobileMenu a {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
   }
 }
