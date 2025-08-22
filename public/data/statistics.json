@@ -18,7 +18,7 @@
       "matches": 0
     }
   ],
-  "lastUpdated": "20 Ağustos 2025",
+  "lastUpdated": "21 Ağustos 2025",
   "instructions": {
     "note": "Bu dosya gol ve asist krallığını saklar",
     "format": "goalScorers: Her oyuncu için id, name, team, goals, matches",

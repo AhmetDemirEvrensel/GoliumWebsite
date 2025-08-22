@@ -3,82 +3,19 @@
   "goalScorers": [
     {
       "id": 1,
-      "name": "Haaland",
-      "team": "Manchester City",
-      "goals": 2,
-      "matches": 1
-    },
-    {
-      "id": 2,
-      "name": "Osimhen",
-      "team": "Galatasaray", 
-      "goals": 2,
-      "matches": 1
-    },
-    {
-      "id": 3,
-      "name": "Gabriel Jesus",
-      "team": "Arsenal",
-      "goals": 1,
-      "matches": 1
-    },
-    {
-      "id": 4,
-      "name": "Ferran Torres",
-      "team": "Barcelona",
-      "goals": 1,
-      "matches": 1
-    },
-    {
-      "id": 5,
-      "name": "Dzeko",
-      "team": "Fenerbahçe",
-      "goals": 1,
-      "matches": 1
-    },
-    {
-      "id": 6,
-      "name": "Martial",
-      "team": "Arsenal",
-      "goals": 1,
-      "matches": 1
+      "name": "Bekleniyor",
+      "team": "Bekleniyor",
+      "goals": 0,
+      "matches": 0
     }
   ],
   "assistProviders": [
     {
       "id": 1,
-      "name": "De Bruyne",
-      "team": "Manchester City",
-      "assists": 2,
-      "matches": 1
-    },
-    {
-      "id": 2,
-      "name": "Mertens",
-      "team": "Galatasaray",
-      "assists": 1,
-      "matches": 1
-    },
-    {
-      "id": 3,
-      "name": "Ødegaard",
-      "team": "Arsenal",
-      "assists": 1,
-      "matches": 1
-    },
-    {
-      "id": 4,
-      "name": "Pedri",
-      "team": "Barcelona",
-      "assists": 1,
-      "matches": 1
-    },
-    {
-      "id": 5,
-      "name": "İrfan Can",
-      "team": "Fenerbahçe",
-      "assists": 1,
-      "matches": 1
+      "name": "Bekleniyor",
+      "team": "Bekleniyor",
+      "assists": 0,
+      "matches": 0
     }
   ],
   "lastUpdated": "21 Ağustos 2025",

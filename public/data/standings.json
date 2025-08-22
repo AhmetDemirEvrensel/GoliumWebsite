@@ -4,31 +4,31 @@
     "A": [
       {
         "id": 1,
-        "name": "Galatasaray",
-        "played": 1,
-        "won": 1,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
         "drawn": 0,
         "lost": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 1,
-        "goalDifference": 1,
-        "points": 3
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
       },
       {
         "id": 2,
-        "name": "Fenerbahçe",
-        "played": 1,
+        "name": "Bekleniyor",
+        "played": 0,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
-        "goalsFor": 1,
-        "goalsAgainst": 2,
-        "goalDifference": -1,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
         "points": 0
       },
       {
         "id": 3,
-        "name": "Beşiktaş",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -40,7 +40,7 @@
       },
       {
         "id": 4,
-        "name": "Trabzonspor",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -54,31 +54,31 @@
     "B": [
       {
         "id": 5,
-        "name": "Barcelona",
-        "played": 1,
-        "won": 1,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
         "drawn": 0,
         "lost": 0,
-        "goalsFor": 1,
+        "goalsFor": 0,
         "goalsAgainst": 0,
-        "goalDifference": 1,
-        "points": 3
+        "goalDifference": 0,
+        "points": 0
       },
       {
         "id": 6,
-        "name": "Real Madrid",
-        "played": 1,
+        "name": "Bekleniyor",
+        "played": 0,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
+        "lost": 0,
         "goalsFor": 0,
-        "goalsAgainst": 1,
-        "goalDifference": -1,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
         "points": 0
       },
       {
         "id": 7,
-        "name": "Atletico Madrid",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -90,7 +90,7 @@
       },
       {
         "id": 8,
-        "name": "Valencia",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -104,31 +104,31 @@
     "C": [
       {
         "id": 9,
-        "name": "Manchester City",
-        "played": 1,
-        "won": 1,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
         "drawn": 0,
         "lost": 0,
-        "goalsFor": 3,
-        "goalsAgainst": 2,
-        "goalDifference": 1,
-        "points": 3
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
       },
       {
         "id": 10,
-        "name": "Arsenal",
-        "played": 1,
+        "name": "Bekleniyor",
+        "played": 0,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 3,
-        "goalDifference": -1,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
         "points": 0
       },
       {
         "id": 11,
-        "name": "Liverpool",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -140,7 +140,7 @@
       },
       {
         "id": 12,
-        "name": "Chelsea",
+        "name": "Bekleniyor",
         "played": 0,
         "won": 0,
         "drawn": 0,
@@ -151,11 +151,256 @@
         "points": 0
       }
     ],
-    "D": [],
-    "E": [],
-    "F": [],
-    "G": [],
-    "H": []
+    "D": [
+      {
+        "id": 13,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 14,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 15,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 16,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "E": [
+      {
+        "id": 17,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 18,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 19,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 20,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "F": [
+      {
+        "id": 21,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 22,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 23,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 24,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "G": [
+      {
+        "id": 25,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 26,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 27,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 28,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "H": [
+      {
+        "id": 29,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 30,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 31,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "id": 32,
+        "name": "Bekleniyor",
+        "played": 0,
+        "won": 0,
+        "drawn": 0,
+        "lost": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ]
   },
   "lastUpdated": "20 Ağustos 2025",
   "instructions": {
