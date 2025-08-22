@@ -61,8 +61,7 @@ export default function Contact() {
                     <h3>Kayıt ücreti ne kadardır?</h3>
                     <p>
                       Kişi başı katılım ücreti 1.000 TL&apos;dir. Takım başı minimum 20 oyuncu ile 
-                      20.000 TL minimum ödeme gereklidir. Bu ücret hakem giderleri, saha kirası 
-                      ve organizasyon masraflarını kapsamaktadır.
+                      20.000 TL minimum ödeme gereklidir.
                     </p>
                   </div>
 
