@@ -25,7 +25,7 @@ export default function AboutUs() {
               <div className={styles.aboutContent}>
                 <p>
                   Golium, Türkiye&apos;nin en prestijli futbol turnuvalarından biridir. 150.000 TL toplam
-                  ödül havuzu ile düzenlenen bu dev organizasyon, profesyonel ve amatör takımları bir
+                  ödül havuzu ile düzenlenen bu dev organizasyon, amatör takımları bir
                   araya getirerek futbol severlere unutulmaz deneyimler yaşatmayı hedefliyor.
                 </p>
                 <p>
