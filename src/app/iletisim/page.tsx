@@ -1,5 +1,17 @@
 import Header from "../../components/Header";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "İletişim - Golium Cup",
+  description: "Golium Cup ile iletişime geçin. Turnuva hakkında sorularınız için bizimle iletişim kurun.",
+  keywords: "golium cup iletişim, futbol turnuvası iletişim, turnuva sorular, golium cup instagram",
+  openGraph: {
+    title: "İletişim - Golium Cup",
+    description: "Golium Cup ile iletişime geçin. Turnuva hakkında sorularınız için bizimle iletişim kurun.",
+    url: "https://www.goliumcup.com.tr/iletisim",
+  },
+};
 
 export default function Contact() {
   return (

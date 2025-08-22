@@ -1,5 +1,17 @@
 import Header from "../../components/Header";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Turnuva Kuralları - Golium Cup",
+  description: "Golium Cup futbol turnuvası kuralları, oyun formatı, katılım şartları ve turnuva düzenlemeleri hakkında detaylı bilgi.",
+  keywords: "golium cup kuralları, futbol turnuvası kuralları, turnuva formatı, katılım şartları",
+  openGraph: {
+    title: "Turnuva Kuralları - Golium Cup",
+    description: "Golium Cup futbol turnuvası kuralları, oyun formatı, katılım şartları ve turnuva düzenlemeleri hakkında detaylı bilgi.",
+    url: "https://www.goliumcup.com.tr/kurallar",
+  },
+};
 
 export default function Rules() {
   return (

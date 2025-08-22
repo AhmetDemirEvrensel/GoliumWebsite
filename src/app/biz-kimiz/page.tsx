@@ -1,5 +1,17 @@
 import Header from "../../components/Header";
 import styles from "./page.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Biz Kimiz - Golium Cup",
+  description: "Golium Cup ekibi hakkında bilgi. Türkiye'nin en büyük amatör futbol turnuvasının arkasındaki vizyon ve misyon.",
+  keywords: "golium cup hakkında, turnuva organizasyonu, futbol turnuvası ekibi, türkiye futbol",
+  openGraph: {
+    title: "Biz Kimiz - Golium Cup",
+    description: "Golium Cup ekibi hakkında bilgi. Türkiye'nin en büyük amatör futbol turnuvasının arkasındaki vizyon ve misyon.",
+    url: "https://www.goliumcup.com.tr/biz-kimiz",
+  },
+};
 
 export default function AboutUs() {
   return (
